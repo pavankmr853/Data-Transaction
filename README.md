@@ -2,19 +2,19 @@
 Data transaction by using struct array
 pragma solidity >=0.4.2;
 contract Struct {
-    struct aditya {
+    struct pardhu {
         uint number;
         string name;
         uint age;
     }
-    mapping (uint=>aditya) c;
+    mapping (uint=>pardhu) c;
     
     uint[] public accounts;
     function setStruct(uint indx,uint x, string memory a, uint y) public {
-     aditya storage adi= c[indx]; 
-     adi.number = x;
-     adi.name = a;
-     adi.age = y;
+     pardhu storage prd= c[indx]; 
+     prd.number = x;
+     prd.name = a;
+     prd.age = y;
      accounts.push(indx)-1;
      }
      function getStruct(uint indx) public view returns(uint,string memory,uint) {
